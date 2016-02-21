@@ -1,0 +1,19 @@
+<#include 'tpl/config.html'/>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-COMPATIBLE" content="IE=8,10,11,chrome=1" >
+<meta name="renderer" content="webkit">
+<link rel="shortcut icon" type="image/ico" href="../images/favicon.ico">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<#if subMeta ??><@subMeta/></#if>
+<#include 'tpl/css.html'/>
+<title>${pageTitle?default(title)}</title>
+</head>
+<body class="${bodyCls}">
+	<#include 'tpl/head.html'/>
+	<#if content ??> <@content/></#if>
+	<#include 'tpl/foot.html'/>
+	<#include 'tpl/js.html'/>
+</body>
+</html>
